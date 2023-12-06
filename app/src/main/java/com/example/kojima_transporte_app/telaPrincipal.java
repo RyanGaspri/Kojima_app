@@ -21,7 +21,7 @@ public class telaPrincipal extends AppCompatActivity {
     RecyclerView recyclerView;
 
     DataBase mydb;
-    ArrayList<String> id, motorista, veiculo, data;
+    ArrayList<String> id, motorista, veiculo, data,placa,km_saida,km_final,hora_final,hora_inicial,data_final,data_inicial,pernoites;
     CustomAdapter customAdapter;
 
     @Override
@@ -44,10 +44,18 @@ public class telaPrincipal extends AppCompatActivity {
         motorista = new ArrayList<>();
         veiculo = new ArrayList<>();
         data = new ArrayList<>();
+        placa = new ArrayList<>();
+        km_saida = new ArrayList<>();
+        km_final = new ArrayList<>();
+        hora_final = new ArrayList<>();
+        hora_inicial = new ArrayList<>();
+        data_final = new ArrayList<>();
+        data_inicial = new ArrayList<>();
+        pernoites = new ArrayList<>();
 
         storeDatainArrays();
 
-        customAdapter = new CustomAdapter(telaPrincipal.this,this, id, motorista, veiculo, data);
+        customAdapter = new CustomAdapter(telaPrincipal.this,this, id, motorista, veiculo, data,placa,km_saida,km_final,hora_final,hora_inicial,data_final,data_inicial,pernoites);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(telaPrincipal.this));
     }
@@ -68,8 +76,16 @@ public class telaPrincipal extends AppCompatActivity {
             while (cursor.moveToNext()){
                 id.add(cursor.getString(0));
                 motorista.add(cursor.getString(1));
-                veiculo.add(cursor.getString(3));
-                data.add(cursor.getString(4));
+                veiculo.add(cursor.getString(2));
+                data.add(cursor.getString(3));
+                placa.add(cursor.getString(4));
+                km_saida.add(cursor.getString(5));
+                km_final.add(cursor.getString(6));
+                hora_final.add(cursor.getString(7));
+                hora_inicial.add(cursor.getString(8));
+                data_final.add(cursor.getString(9));
+                data_inicial.add(cursor.getString(10));
+                pernoites.add(cursor.getString(11));
             }
         }
     }

@@ -1,0 +1,164 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="410dp"
+    android:layout_height="730dp"
+    android:background="@drawable/tela_transporte"
+    tools:context=".telaTransporte">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/DataOT2"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="80dp"
+            android:inputType="date"
+            android:hint="DIA/MES/ANO"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/MotoristaEdit2"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:hint="Motorista"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="160dp"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/veiculoEdit2"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="224dp"
+            android:background="@null"
+            android:hint="Veiculo" />
+
+        <EditText
+            android:id="@+id/placaEdit2"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:hint="Placa"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="287dp"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/KmSaidaEdit2"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:hint="Km saida"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="348dp"
+            android:inputType="number"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/KmFinalEdit2"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:hint="Km Final"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="413dp"
+            android:inputType="number"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/HoraInicialEdit2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:hint="Hora Inicial"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="494dp"
+            android:inputType="datetime"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/DataHI2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:hint="Dia/Mes/Ano"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="566dp"
+            android:inputType="date"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/HoraFinalEdit2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:hint="Hora Final"
+            android:layout_marginStart="244dp"
+            android:layout_marginTop="495dp"
+            android:inputType="datetime"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/DataHF2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:hint="Dia/Mes/Ano"
+            android:layout_marginStart="244dp"
+            android:layout_marginTop="566dp"
+            android:inputType="date"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/PernoitesEdit2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:hint="Pernoites"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="619dp"
+            android:inputType="number"
+            android:background="@null"
+            />
+
+        <Button
+            android:id="@+id/botaoatualizar"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Alterar"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="670dp"/>
+
+        <Button
+            android:id="@+id/botaoexcluir"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Excluir"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="720dp"/>
+
+        <ImageView
+            android:id="@+id/benviar_image"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:src="@drawable/benviar"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="660dp"
+            />
+        <ImageButton
+            android:id="@+id/enviar_botão"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="690dp"
+            android:background="@null"
+            android:contentDescription="Botão de envio"
+            />
+    </RelativeLayout>
+</ScrollView>

@@ -21,19 +21,36 @@ import java.util.ArrayList;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     Context context;
     Activity activity;
-    ArrayList id, motorista, veiculo, data;
+    ArrayList id, motorista, veiculo, data,placa,km_saida,km_final,hora_final,hora_inicial,data_final,data_inicial,pernoite;
 
     CustomAdapter(Activity activity,Context context,
                   ArrayList id,
                   ArrayList motorista,
                   ArrayList veiculo,
-                  ArrayList data){
+                  ArrayList data,
+                  ArrayList placa,
+                  ArrayList km_saida,
+                  ArrayList km_final,
+                  ArrayList hora_final,
+                  ArrayList hora_inicial,
+                  ArrayList data_final,
+                  ArrayList data_inicial,
+                  ArrayList pernoite
+    ){
         this.activity = activity;
         this.context = context;
         this.id = id;
         this.veiculo = veiculo;
         this.motorista = motorista;
         this.data = data;
+        this.placa = placa;
+        this.km_saida = km_saida;
+        this.km_final = km_final;
+        this.hora_final = hora_final;
+        this.hora_inicial = hora_inicial;
+        this.data_final = data_final;
+        this.data_inicial = data_inicial;
+        this.pernoite = pernoite;
     }
     @NonNull
     @Override
@@ -57,6 +74,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 intent.putExtra("motorista", String.valueOf(motorista.get(position)));
                 intent.putExtra("veiculo", String.valueOf(veiculo.get(position)));
                 intent.putExtra("data", String.valueOf(data.get(position)));
+                intent.putExtra("placa", String.valueOf(placa.get(position)));
+                intent.putExtra("kmsaida", String.valueOf(km_saida.get(position)));
+                intent.putExtra("kmfinal", String.valueOf(km_final.get(position)));
+                intent.putExtra("datainicial", String.valueOf(data_inicial.get(position)));
+                intent.putExtra("datafinal", String.valueOf(data_final.get(position)));
+                intent.putExtra("horainicial", String.valueOf(hora_inicial.get(position)));
+                intent.putExtra("horafinal", String.valueOf(hora_final.get(position)));
+                intent.putExtra("pernoites", String.valueOf(pernoite.get(position)));
                 activity.startActivityForResult(intent,1);
             }
         });
